@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'books/css/main.css' %}">
+</head>
+<body>
+    <div class="main">
+    {% include 'navbar.html' %}
+
+    {% block content %}
+
+    {% endblock content %}
+
+    {% include 'footer.html' %}
+
+    </div>
+
+
+</body>
+</html>

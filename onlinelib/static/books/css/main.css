@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(113.49deg, #984D38 -30.3%, #181E41 58.12%) no-repeat;
+    font-weight: 500;
+}
+
+.header{
+    max-width: 1197px;
+    margin: 0 auto;
+    /*растаскивание элементов по экрану*/
+    display: flex;
+    /*Установка расстояния между элементами*/
+    justify-content: space-between;
+    /*Выравнивание всех элементов по базовой линии по горизонтали*/
+    align-items: center;
+    padding: 20px 10px 100px 10px;
+}
+
+.header__logo{
+    display: block;
+    /*Размеры лого на экране*/
+    width: 170px;
+    height: 30px;
+    /*Подгрузка лого*/
+    background-image: url(../img/ru_logo.svg);
+    background-repeat: no-repeat;
+}
+
+.form{
+    /*Изменение положения поискового ярлыка*/
+    position: relative;
+}
+
+/*Перемещение иконки лупы в поисковую строку*/
+
+.form__button{
+    width: 100px;
+    height: 100px;
+    display: block;
+    background-image: url(../img/search.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 10px;
+}
+
+.form__input{
+    width: 324px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    border: none;
+    padding: 10px 40px;
+    color: white;
+
+}
+
+.form__input::placeholder{
+    background: rgba(255, 255, 255, 0.5);
+}
+.form__input:focus{
+    outline: none;
+}
+
+.header__list{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    gap: 40px;
+}
+
+.header__link{
+    /*    Задание белого цвета для текста*/
+    color: white;
+    /*    Удаление нижнего подчеркивания элементов меню*/
+    text-decoration: none;
+}
+
+.header__link_gradient{
+    background: linear-gradient(214.02deg, #B75CFF 6.04%, #671AE4 92.95%);
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+.header__link_gradient{
+    background: linear-gradient(214.02deg, #B75CFF 6.04%, #671AE4 92.95%);
+    border-radius: 10px;
+    padding: 10px 20px;}
+
+/* Контейнер <div> - необходим для размещения выпадающего содержимого */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}

@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+<div class="container">
+  <h1>Форма поиска книги</h1>
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+<!--    <input type="text" name="book_name" value="Название"/>-->
+<!--    <input type="text" name="author_name" value="Автор"/>-->
+<!--    <input type="text" name="ISBN" value="ISBN"/>-->
+
+<!--    <button type="submit">Поиск</button>-->
+</form>
+
+  <div class="book-search">
+    <form class="form" action="#" method="get">
+      <div class="form_field">
+        <label for="formInput#search">Поиск книги</label>
+        <input class="input input--text" id="formInput#search" type="text" name="search"
+        placeholder="Поиск по названию книги">
+      </div>
+
+      <input class="btn btn--sub btn--lg" type="submit" value="Search">
+    </form>
+  </div>
+
+<h1>Вы искали книгу "{{ context }}"</h1>
+
+
+</div>
+
+{% endblock content %}

@@ -31,7 +31,7 @@ class Review(models.Model):
     # owner =
     book = models.ForeignKey(Book, on_delete=models.CASCADE)  # получение id рецензируемой книги (удаление оценки
     # при удалении книги)
-    bode = models.TextField(null=True, blank=True)  # описание рецензии
+    body = models.TextField(null=True, blank=True)  # описание рецензии
     value = models.CharField(max_length=100, choices=TYPE_VOTE)  # оценка книги
     created = models.DateTimeField(auto_now_add=True)  # дата создания записи
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)

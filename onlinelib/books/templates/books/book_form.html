@@ -19,7 +19,7 @@
     <form class="form" action="#" method="get">
       <div class="form_field">
         <label for="formInput#search">Поиск книги</label>
-        <input class="input input--text" id="formInput#search" type="text" name="search"
+        <input class="input input--text" id="formInput#search" type="text" name="search_query"
         placeholder="Поиск по названию книги">
       </div>
 
@@ -27,8 +27,8 @@
     </form>
   </div>
 
-<h1>Вы искали книгу "{{ context }}"</h1>
-
+<h1>Вы искали книгу "{{ book_title }}"</h1>
+<h1>Автор произведения {{ book_author }}</h1>
 
 </div>
 

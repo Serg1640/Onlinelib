@@ -6,4 +6,9 @@ admin.site.register(Review)
 admin.site.register(Tag)
 
 
-# Register your models here.
+# @admin.register(Book, Review, Tag)
+# class BookAdmin(admin.ModelAdmin):
+#     list_display = ['title', 'author', 'created', 'status']
+#     list_filter = ['status', 'created', 'author']
+#     search_fields = ['title', 'body']
+

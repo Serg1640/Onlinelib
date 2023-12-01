@@ -6,6 +6,15 @@ body {
     font-weight: 500;
 }
 
+.header__nav{
+    display: inline;
+    padding: 0px
+}
+
+.container{
+    display: inline;
+}
+
 .header{
     max-width: 1197px;
     margin: 0 auto;
@@ -15,17 +24,7 @@ body {
     justify-content: space-between;
     /*Выравнивание всех элементов по базовой линии по горизонтали*/
     align-items: center;
-    padding: 20px 10px 100px 10px;
-}
-
-.header__logo{
-    display: block;
-    /*Размеры лого на экране*/
-    width: 170px;
-    height: 30px;
-    /*Подгрузка лого*/
-    background-image: url(../img/ru_logo.svg);
-    background-repeat: no-repeat;
+    padding: 0px;
 }
 
 .form{

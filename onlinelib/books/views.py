@@ -21,19 +21,26 @@ def contact_page(request):
     # страница контактов
     return render(request, 'books/contact.html')
 
+
 def book_page(request, pk: str):
     book_name = pk.capitalize()
-    # страница о запрашиваемой книге
-    # return HttpResponse(request, 'books/book.html')
     return render(request, 'books/book.html', {'book_name': book_name})
 
 
 def search_book(request):
-    book = ''
-    book_title = ''
-    book_author = ''
+    # функция поиска книги по БД
+    book, book_title, book_author = '', '', ''      # значения описания книги по умолчанию
     if request.GET.get('search_query'):
         search_query = request.GET.get('search_query')
+        # проверка наличия книги в БД
+        if Book.objects.filter(title=search_query).exists():
+            print('Есть инфа в БД')
+            book = Book.objects.filter(title=search_query)
+        else:
+            print('Записи нет')
+            book = 'Книги нет'
+            contex = {'book': book}
+            return render(request, 'books/book_form.html', contex)
         book = Book.objects.filter(title=search_query)
     for b in book:
         book_title = b.title

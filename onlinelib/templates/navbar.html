@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'books/css/main.css' %}">
 </head>
 <body>
     <header class="header">
-        <a href="#" class="header__logo"></a>
+<!--        <a href="#" class="header__logo"></a>-->
 <!--        <div class="form">-->
 <!--&lt;!&ndash;            <button class="form__button" type="button">Поиск!</button>&ndash;&gt;-->
 <!--            <input class="form__input"  type="search" placeholder="Поиск по сайту">-->
@@ -24,14 +26,7 @@
             </ul>
         </nav>
     </header>
-    <section>
-        <div class="container" style="white">
-            <h1>Онлайн поиск книг</h1>
-            <p>Более 100000 различных произведений</p>
-            <a href="#">Получить информацию об интересующей книге</a>
-            <a href="#">Войти в аккаунт</a>
-        </div>
-    </section>
+
   <hr>
 
 </body>

@@ -27,9 +27,13 @@
     </form>
   </div>
 
-<h1>Вы искали книгу "{{ book_title }}"</h1>
-<h1>Автор произведения {{ book_author }}</h1>
-
+{% if  book == 'Книги нет' %}
+<h2>Книги в БД нет</h2>
+{% else %}
+<h2>Вы искали книгу "{{ book_title }}"</h2>
+<h2>Автор произведения {{ book_author }}</h2>
+{% endif %}
+<hr>
 </div>
 
 {% endblock content %}
